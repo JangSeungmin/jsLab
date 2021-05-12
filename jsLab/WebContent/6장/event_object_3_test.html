@@ -5,9 +5,9 @@
 <title> 이벤트 </title>
 <script type="text/javascript">
 //<![CDATA[
-document.onkeydown=function(){
-
-
+document.onkeydown=function(e){
+   var eventObj=e?e:window.event;
+   alert(eventObj);
 }
 //]]>
 </script>

@@ -5,9 +5,12 @@
 <title> 이벤트 </title>
 <script type="text/javascript">
 //<![CDATA[
-  document.onkeydown=function(e){
- 
+document.onkeydown=function(e){
+  var evnt=e?e:widonw.event;
+  if(evnt.ctrlKey && evnt.keyCode==75){
+    alert("단축키 완료");
   }
+}
 //]]>
 </script>
 </head>
