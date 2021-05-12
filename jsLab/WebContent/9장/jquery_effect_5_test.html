@@ -7,15 +7,15 @@
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
- 
- 
- 
- 
- 
- 
- 
- 
- 
+  $("#btn1").on("click",function(){
+    $("h1").slideUp(1000);
+  });
+  $("#btn2").on("click",function(){
+    $("h1").slideDown("slow");
+  });
+  $("#btn3").on("click",function(){
+    $("h1").slideToggle("fast");
+  });
 });
 //]]>
 </script>

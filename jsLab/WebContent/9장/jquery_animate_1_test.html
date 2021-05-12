@@ -7,18 +7,18 @@
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
+   $("h1").animate({
+      marginLeft:"250px"
+   },5000,function(){ alert("도착완료!")});
 
+   $("h2").animate({
+      marginLeft:"250px",
+      opacity:0.3,
+      width:"100px"
+   },5000);
 
-
-
-
-
-
-
-
-
-
-
+   $("h3").animate({marginLeft:"250px"},3000)
+   .animate({marginLeft:"100px"},2000);
 });
 //]]>
 </script>
