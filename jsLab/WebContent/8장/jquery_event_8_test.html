@@ -7,18 +7,18 @@
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
+   $("#user_id").keydown(function(e){ //키보드 자판을 눌렀을 때
+      $(this).css("background-color","purple");
+      $("#txt1").text(e.keyCode);  //고유 키 코드 값을 출력합니다.
+   });
 
+   $("#user_id").keypress(function(e){ //키보드 자판을 눌렀을 때
+      $("#txt2").text(e.keyCode); //고유 키 코드 값을 출력합니다.
+   });
 
-
-
-
-
-
-
-
-
-
-
+   $("#user_id").keyup(function(){ //자판을 눌렀다 띄었을 때
+      $(this).css("background-color","yellow");
+   });
 });
 //]]>
 </script>

@@ -11,13 +11,13 @@
    width="300" height="200"></iframe>
    <script type="text/javascript">
    //<![CDATA[
-   
-   
-   
-   
-   
-   
-   
+   $("iframe").load(function(){
+      $("#wrap").append("<p>로딩완료</p>");
+   });
+
+   $(document).ready(function(){
+      $("#wrap").append("<p>레디완료</p>");
+   });
    //]]>
    </script>
 </body>

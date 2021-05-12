@@ -7,15 +7,15 @@
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
+  $("#btn1").click(function(){ //<button id="btn1">을 클릭했을 때...
+     $("p").css("background-color","yellow");
+  });
 
+  $("#btn2").dblclick(function(){ //<button id="btn2">을 더블클릭했을 때...
+     $("p").css("background-color","purple");
+  });
 
-
-
-
-
-
-
-
+  $("#btn2").dblclick(); //<button id="btn2">을 강제로 더블클릭 이벤트 발생.
 });
 //]]>
 </script>

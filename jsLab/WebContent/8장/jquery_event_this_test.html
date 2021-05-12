@@ -7,10 +7,10 @@
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
-
-
-
-	});
+   $("#btn").mouseover(function(){ //버튼에 마우스를 올릴 때 마다...
+      $(this).css("border","2px solid red"); //버튼에 선을 생성합니다.
+      $(this).text("MouseOver"); //버튼에 텍스트를 "MouseOver"로 바꿉니다.
+   });
 });
 //]]>
 </script>

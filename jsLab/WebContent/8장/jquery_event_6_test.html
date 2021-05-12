@@ -7,11 +7,11 @@
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
-   
-      
-      
-      
-  
+   $(document).mousemove(function(e){
+      var x=e.pageX;
+      var y=e.pageY;
+      $("p").text("x: "+x+" y: "+y);
+   });
 });
 //]]>
 </script>

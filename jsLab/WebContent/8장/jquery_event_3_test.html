@@ -7,19 +7,19 @@
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
+  $("#btn1").click(function(){ //<a id="btn1">을 클릭했을 때
+     $("p").css("background-color","purple");
+     return false; //<a> 태그에 링크 기능을 차단시킵니다.
+  });
 
+  $("#btn2").click(function(e){ //<a id="btn2">을 클릭했을 때
+      e.preventDefault(); //<a> 태그에 링크 기능을 차단시킵니다.
+     $("p").css("background-color","yellow");
+  });
 
-
-});
-
-
-
-
-});
-
-
-
-
+  $("#btn3").click(function(){ //<a id="btn3">을 클릭했을 때
+     $("p").css("background-color","aqua");
+  });
 });
 //]]>
 </script>

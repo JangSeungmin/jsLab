@@ -7,18 +7,18 @@
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
+   $("#btn1").mouseover(function(){ 
+      $("p").css("background-color","yellow");
+   });
+   $("#btn1").mouseout(function(){
+      $("p").css("background-color","purple");
+   });
 
-
-
-
-
-
-
-
-
-
-
-
+   $("#btn2").hover(function(){
+      $("p").css("background-color","yellow");
+   },function(){
+      $("p").css("background-color","purple");
+   });
 });
 //]]>
 </script>
