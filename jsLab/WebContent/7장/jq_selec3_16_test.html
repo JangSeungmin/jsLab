@@ -7,10 +7,10 @@
 <script type="text/javascript">
 //<![CDATA[
  $(function(){
- 
- 
- 
- 
+  $("strong").unwrap();
+  $(".ct1").wrap("<div />");
+  $(".ct2").wrapAll("<div />");
+  $("li").wrapInner("<h3 />");
  });
 //]]>
 </script>

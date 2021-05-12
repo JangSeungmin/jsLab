@@ -7,10 +7,10 @@
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
-
-
-
-
+  $("#st_1").prop("title","단락 태그");
+  $("#txt1").text( $("#st_1").prop("title") );
+  $("#txt2").text( $("#st_1").prop("tagName") );
+  $("#txt3").text( $("#sel").prop("selectedIndex") );
 });
 //]]>
 </script>
