@@ -56,34 +56,27 @@
 
 				<div class="navbar-custom-menu">
 					<ul class="nav navbar-nav">
+
 						<!-- Messages: style can be found in dropdown.less-->
 						<li class="dropdown messages-menu"><a href="#"
 							class="dropdown-toggle" data-toggle="dropdown"> <i
 								class="fa fa-envelope-o"></i> <span class="label label-success">4</span>
-						</a>
-							<ul class="dropdown-menu">
-								<li class="header">You have 4 messages</li>
-								<li>
-									<!-- inner menu: contains the actual data -->
-									<ul class="menu">
-										<li>
-											<!-- start message --> <a href="#">
-												<div class="pull-left">
-													<img src="../../dist/img/user2-160x160.jpg"
-														class="img-circle" alt="User Image">
-												</div>
-												<h4>
-													Support Team <small><i class="fa fa-clock-o"></i> 5
-														mins</small>
-												</h4>
-												<p>Why not buy a new awesome theme?</p>
-										</a>
-										</li>
-										<!-- end message -->
-									</ul>
-								</li>
-								<li class="footer"><a href="#">See All Messages</a></li>
-							</ul></li>
+
+						</a> <!-- 구글 세계 언어 선택 --> <script type="text/javascript">
+							function googleTranslateElementInit() {
+								new google.translate.TranslateElement(
+										{
+											pageLanguage : 'ko',
+											includedLanguages : 'en,ja,ko,zh-CN',
+											layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+										}, 'google_translate_element');
+							}
+						</script>
+							<script type="text/javascript"
+								src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+							<li><div id="google_translate_element"></div></li>
+
+
 						<!-- Notifications: style can be found in dropdown.less -->
 						<li class="dropdown notifications-menu"><a href="#"
 							class="dropdown-toggle" data-toggle="dropdown"> <i
@@ -324,7 +317,8 @@
 						</span>
 					</a>
 						<ul class="treeview-menu">
-							<li><a href="boardGeneral.html"><i class="fa fa-circle-o"></i>
+							<li><a href="boardGeneral.html"><i
+									class="fa fa-circle-o"></i>
 									일반 게시판</a></li>
 							<li><a href="boardDonga.html"><i class="fa fa-circle-o"></i>
 									동아일보 게시판</a></li>
@@ -449,78 +443,99 @@
 
 
 						<script type="text/javascript" class="init">
-							$(document).ready(function() {
-								
-								var g = "https://api.rss2json.com/v1/api.json?rss_url=";
-								var dongaNews = "https://it.donga.com/feeds/rss/news/";
-								var keys = "&api_key=bdl3lrsxdpnhqm6hhhler7hufnnecux4bwztd19b";
-								var counts = "&count=200";
-								
-								$.ajax({
-									url : g + dongaNews + keys + counts, //요청할 데이터 경로.
-									dataType : "json", //요청할 데이터에 타입.
-									success : function(data) { //성공적으로 요청했왔을 때...
-										//obj = JSONtoString(data);
-										// JSON.stringify()는 json 객체를 String 객체로 변환시킨다.
-										// JSON.parse()는 string 객체를 json 객체로 변환시킨다.
-										var obj = JSON.stringify(data);
-										//alert(obj);
-										
-										$.each(data.items, function(i, d) {
-						                     console.log(d);
-						                     var pubDate = d["pubDate"];
-						                     var pic = d["thumbnail"];
-						                     pic.width=100;
-						                     pic.height=133;
-						                     var title = d["title"];
-						                     var author = d["author"];
-						                     var lk = d["link"];
-						                     
-						                     $("#example tbody").append(
-						                           '<tr><td>' +pubDate + '</td><td><img height="100" width="133" alt="" src="'+pic+'"></td><td><a href="'+lk+'" target="_blank">'
-						                                 + title + '</a></td><td>'
-						                                 + author + '</td></tr>');
-						                  });
-						               },
-									
-									error : function(data) {
-										alert("에러 발생하였습니다.");	
-									},
-									
-									complete : function(data) {
-										$('#example').DataTable({
-											"language" : {
-												"sEmptyTable" : "데이터가 없습니다",
-												"sInfo" : "_START_ - _END_ / _TOTAL_",
-												"sInfoEmpty" : "0 - 0 / 0",
-												"sInfoFiltered" : "(총 _MAX_ 개)",
-												"sInfoPostFix" : "",
-												"sInfoThousands" : ",",
-												"sLengthMenu" : "페이지당 줄수 _MENU_",
-												"sLoadingRecords" : "읽는중...",
-												"sProcessing" : "처리중...",
-												"sSearch" : "검색:",
-												"sZeroRecords" : "검색 결과가 없습니다",
-												"oPaginate" : {
-													"sFirst" : "처음",
-													"sLast" : "마지막",
-													"sNext" : "다음",
-													"sPrevious" : "이전"
-												},
-												"oAria" : {
-													"sSortAscending" : ": 오름차순 정렬",
-													"sSortDescending" : ": 내림차순 정렬"
-												}
-											}
-										
-										});
-									} 
-									
-									
-								}); // $.ajax() 메서드에 종료
+							$(document)
+									.ready(
+											function() {
 
+												var g = "https://api.rss2json.com/v1/api.json?rss_url=";
+												var dongaNews = "https://it.donga.com/feeds/rss/news/";
+												var keys = "&api_key=bdl3lrsxdpnhqm6hhhler7hufnnecux4bwztd19b";
+												var counts = "&count=200";
 
-							}); // end of $(document).ready(function()
+												$
+														.ajax({
+															url : g + dongaNews
+																	+ keys
+																	+ counts, //요청할 데이터 경로.
+															dataType : "json", //요청할 데이터에 타입.
+															success : function(
+																	data) { //성공적으로 요청했왔을 때...
+																//obj = JSONtoString(data);
+																// JSON.stringify()는 json 객체를 String 객체로 변환시킨다.
+																// JSON.parse()는 string 객체를 json 객체로 변환시킨다.
+																var obj = JSON
+																		.stringify(data);
+																//alert(obj);
+
+																$
+																		.each(
+																				data.items,
+																				function(
+																						i,
+																						d) {
+																					console
+																							.log(d);
+																					var pubDate = d["pubDate"];
+																					var pic = d["thumbnail"];
+																					pic.width = 100;
+																					pic.height = 133;
+																					var title = d["title"];
+																					var author = d["author"];
+																					var lk = d["link"];
+
+																					$(
+																							"#example tbody")
+																							.append(
+																									'<tr><td>'
+																											+ pubDate
+																											+ '</td><td><img height="100" width="133" alt="" src="'+pic+'"></td><td><a href="'+lk+'" target="_blank">'
+																											+ title
+																											+ '</a></td><td>'
+																											+ author
+																											+ '</td></tr>');
+																				});
+															},
+
+															error : function(
+																	data) {
+																alert("에러 발생하였습니다.");
+															},
+
+															complete : function(
+																	data) {
+																$('#example')
+																		.DataTable(
+																				{
+																					"language" : {
+																						"sEmptyTable" : "데이터가 없습니다",
+																						"sInfo" : "_START_ - _END_ / _TOTAL_",
+																						"sInfoEmpty" : "0 - 0 / 0",
+																						"sInfoFiltered" : "(총 _MAX_ 개)",
+																						"sInfoPostFix" : "",
+																						"sInfoThousands" : ",",
+																						"sLengthMenu" : "페이지당 줄수 _MENU_",
+																						"sLoadingRecords" : "읽는중...",
+																						"sProcessing" : "처리중...",
+																						"sSearch" : "검색:",
+																						"sZeroRecords" : "검색 결과가 없습니다",
+																						"oPaginate" : {
+																							"sFirst" : "처음",
+																							"sLast" : "마지막",
+																							"sNext" : "다음",
+																							"sPrevious" : "이전"
+																						},
+																						"oAria" : {
+																							"sSortAscending" : ": 오름차순 정렬",
+																							"sSortDescending" : ": 내림차순 정렬"
+																						}
+																					}
+
+																				});
+															}
+
+														}); // $.ajax() 메서드에 종료
+
+											}); // end of $(document).ready(function()
 						</script>
 
 

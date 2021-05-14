@@ -35,19 +35,21 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+<link rel="stylesheet" type="text/css" href="./pages/examples/css/base.css" media="all" />
+<link rel="stylesheet" type="text/css" href="./pages/examples/css/main.css" media="all" />
   <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">  
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="index.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>어드민</b>엘티이</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -289,7 +291,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="./pages/examples/profile.html" class="btn btn-default btn-flat">Profile</a>
+                  <a href="./pages/examples/Profile.html" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
                   <a href="./pages/examples/login.html" class="btn btn-default btn-flat">Sign out</a>
@@ -452,9 +454,6 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/examples/boardGeneral.html"><i class="fa fa-circle-o"></i> 게시물</a></li>
-            <li><a href="pages/examples/chosun.html"><i class="fa fa-circle-o"></i> 조선일보</a></li>
-            <li><a href="pages/examples/gallery.html"><i class="fa fa-circle-o"></i> Gallery</a></li>
             <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
             <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
             <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
@@ -522,7 +521,30 @@
         <li class="active">Dashboard</li>
       </ol>
     </section>
-
+<div id="visual">
+ <div id="mySwipe"  class='swipe' >
+    <ul class="touch_banner swipe-wrap" style = "text-align : center"> <!-- 배너 목록 -->
+      <li><a href="#"><img src="./pages/examples/images/visual_img_1.jpg" alt="" /></a></li>
+      <li><a href="#"><img src="./pages/examples/images/visual_img_2.jpg" alt="" /></a></li>
+      <li><a href="#"><img src="./pages/examples/images/visual_img_3.jpg" alt="" /></a></li>
+   </ul>
+  </div>
+  <ul class="touch_bullet"> <!-- 배너 위치 표시 -->
+     <li><img src="./pages/examples/images/visual_bullet_on.png" class="active" alt="" /></li>
+     <li><img src="./pages/examples/images/visual_bullet_off.png" alt="" /></li>
+     <li><img src="./pages/examples/images/visual_bullet_off.png" alt="" /></li>
+  </ul>
+  <p class="touch_left_btn"> <!-- 이전 버튼 -->
+     <a href="#">
+     <img src="./pages/examples/images/visual_btn_left.png" alt="이전 배너" />
+     </a>
+  </p>
+  <p class="touch_right_btn"> <!-- 이전 버튼 -->
+     <a href="#">
+     <img src="./pages/examples/images/visual_btn_right.png" alt="다음 배너" />
+     </a>
+  </p>
+</div>
     <!-- Main content -->
     <section class="content">
       <!-- Small boxes (Stat box) -->
@@ -1266,6 +1288,20 @@
 <script src="bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
+
+  
+  <link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script> <!-- 제이쿼리 라이이브러리 연동 -->
+
+<link rel="stylesheet" type="text/css" href="css/style.css" /><!-- 터치 슬라이드 스타일(CSS) 연동 -->
+<script type="text/javascript" src="./pages/examples/js/swipe.js"></script> <!-- 터치 슬라이드 플러그인 연동 -->
+<script type="text/javascript" src="./pages/examples/js/jquery.bxslider.min.js"></script>  <!-- bxSlider 플러그인 연동 -->
+<script type="text/javascript" src="./pages/examples/js/jquery-ui-1.10.4.custom.min.js"></script> <!-- UI 플러그인 연동 -->
+<script type="text/javascript" src="./pages/examples/js/jquery.cookie.js"></script>  <!-- 쿠키 플러그인 연동 -->
+<script type="text/javascript" src="./pages/examples/js/common.js"></script>
+<script type="text/javascript" src="./pages/examples/js/main.js"></script>
+
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
